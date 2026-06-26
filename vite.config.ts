@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 
 export default defineConfig({
+  base: '/Korean-Sentence-Analyzer/',
   plugins: [react()],
   resolve: {
     alias: {
@@ -29,8 +30,6 @@ export default defineConfig({
       '/parse': {
         target: 'http://localhost:1337',
         changeOrigin: true,
-        // Forward LiveQuery WebSocket upgrades (Parse.liveQueryServerURL =
-        // wss://<host>/parse) to the Parse LiveQuery server on :1337.
         ws: true,
       },
     },
